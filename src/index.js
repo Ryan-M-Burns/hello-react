@@ -12,18 +12,18 @@ const Button = (props) => {
 
 const Application = () => {
 
+  const [name, setName] = useState("");
 
   const reset = () => {
-    
+    setName("");
   };
 
   return (
 
     <main>
-
+      <input placeholder='Type your name' value={name} onChange={e => setName(e.target.value)} ></input>
       <Button text="Reset" onClick={reset} />
-      <h1>Hello React</h1>
-
+      {name && <h1>Hello {name}</h1>}
     </main>
   );
 };
