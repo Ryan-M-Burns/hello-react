@@ -3,22 +3,27 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 const Button = (props) => {
-  // your code here
+  return (
+    <button onClick={props.onClick}>
+      {props.text}
+    </button>
+  );
 };
 
 const Application = () => {
 
-  // your code here
 
   const reset = () => {
-    console.log("reset");
-    // your code here
+    
   };
 
   return (
+
     <main>
-      {/* your code here -- this entire line including the curly braces can be removed */}
+
+      <Button text="Reset" onClick={reset} />
       <h1>Hello React</h1>
+
     </main>
   );
 };
